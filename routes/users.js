@@ -14,8 +14,9 @@ router.get('/', function(req, res, next) {
 })
 
 // POST request to /login
-router.post('/', function(req, res, next) {
-    // do something
+router.post('/users/newUser', function(req, res, next) {
+    const test = req.body.name
+    res.send(test)
 })
 
 // function addUser()
