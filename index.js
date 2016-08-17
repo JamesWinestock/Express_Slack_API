@@ -1,4 +1,5 @@
 const express = require('express')
+const http = require('http')
 const logger = require('morgan')
 const bodyParser = require('body-parser')
 const cors = require('cors')
@@ -16,14 +17,14 @@ app.use(helmet())
 // --------------------------------------------- Routes
 
 const users = require('./routes/users')
-const login = require('./routes/login')
-const tests = require('./routes/test')
-const posts = require('./routes/posts')
+// const login = require('./routes/login')
+// const tests = require('./routes/test')
+// const posts = require('./routes/posts')
 
 app.use('/users', users)
-app.use('/login', login)
-app.use('/tests', tests)
-app.use('/posts', posts)
+// app.use('/login', login)
+// app.use('/tests', tests)
+// app.use('/posts', posts)
 
 app.get('/', function(request, response) {
   response.send("Heyyy")
