@@ -2213,3 +2213,8 @@
 2016-08-18T10:12:13.605379000 1700.715967s notice: Someone asked for the nonwhitelisted file "/sockjs-node/info".  If this should be accessible, add it to the static web assets.
 2016-08-18T10:12:19.445090000 1706.555475s notice: Someone asked for the nonwhitelisted file "/sockjs-node/info".  If this should be accessible, add it to the static web assets.
 2016-08-18T10:12:25.422744000 1712.532859s notice: Someone asked for the nonwhitelisted file "/sockjs-node/info".  If this should be accessible, add it to the static web assets.
+2016-08-18T10:12:31.510716000 1718.620559s notice: Someone asked for the nonwhitelisted file "/sockjs-node/info".  If this should be accessible, add it to the static web assets.
+2016-08-18T10:12:37.636066000 1724.745707s notice: Someone asked for the nonwhitelisted file "/sockjs-node/info".  If this should be accessible, add it to the static web assets.
+2016-08-18T10:12:43.610846000 1730.720216s notice: Someone asked for the nonwhitelisted file "/sockjs-node/info".  If this should be accessible, add it to the static web assets.
+2016-08-18T10:12:49.627163000 1736.736262s notice: Someone asked for the nonwhitelisted file "/sockjs-node/info".  If this should be accessible, add it to the static web assets.
+2016-08-18T10:12:55.624018000 1742.732915s notice: Someone asked for the nonwhitelisted file "/sockjs-node/info".  If this should be accessible, add it to the static web assets.
