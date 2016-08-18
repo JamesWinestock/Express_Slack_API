@@ -32,10 +32,17 @@ app.get('/', function(request, response) {
 
 // --------------------------------------------- Routes />
 
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
 app.use((error, request, response, next) => {
   response.status(error.status || 500)
   response.json({ error: error.message })
 })
+
 
 const server = app.listen(3000, () => {
   const host = server.address().address

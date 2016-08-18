@@ -9,7 +9,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "engines": {"node": "6.2.2"},
+  "engines": {
+    "node": "6.2.2"
+  },
   "dependencies": {
     "bcrypt": "^0.8.7",
     "bluebird": "^3.4.1",
