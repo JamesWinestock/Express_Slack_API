@@ -15,7 +15,6 @@ router.use(function(req, res, next) {
 router.get('/', function(req, res, next) {
     r.db('mf_users').table('users')
       .run().then((users) => {
-        // console.log(users)
         res.json(users)
       })
 })
@@ -24,22 +23,18 @@ router.get('/', function(req, res, next) {
 
 // POST request to /login
 router.post('/newUser', function(req, res, next) {
-      var test = req.body.name
-      res.send(test)
+      var userEntry = {
+        name: req.body.name,
+        email: req.body.email,
+        day: req.body.day
+      }
+      res.send(userEntry)
       r.db('mf_users').table('users').insert({
-        name: test
+        userEntry
   }).run().then((user) => {
-    console.log(user)
+    return user
   })
 })
-
-// function addUser()
-// const user = thinky.createModel("User", {
-//   id: String,
-//   name: String,
-//   email: String,
-// })
-
 
 router.get('/newUser', (req, res) => {
   user.save
