@@ -34,7 +34,6 @@ router.delete('/:id', function(req, res) {
     })
 })
 
-// POST request to /login
 router.post('/newUser', function(req, res, next) {
       res.send(req.body)
       r.db('mf_users').table('users').insert({
@@ -45,6 +44,20 @@ router.post('/newUser', function(req, res, next) {
     return user
   })
 })
+
+
+router.post('/:id', function(req, res) {
+  r.db('mf_users').table('users').get(req.params.id).update({
+    name: req.body.name,
+    email: req.body.email,
+    day: req.body.day
+  })
+  .run().then(user => {
+    return user
+  })
+})
+
+
 
 router.get('/newUser', (req, res) => {
   user.save
