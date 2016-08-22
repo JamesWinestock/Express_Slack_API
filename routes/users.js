@@ -21,22 +21,26 @@ router.get('/', function(req, res, next) {
 
 
 router.get('/:id', function(req, res) {
-  r.db('mf_users').table('users').filter({id: req.params.id})
+  r.db('mf_users').table('users').get(req.params.id)
     .run().then((user) => {
       res.json(user)
     })
 });
 
+router.delete('/:id', function(req, res) {
+  r.db('mf_users').table('users').get(req.params.id).delete()
+    .run().then(result => {
+      res.send(result)
+    })
+})
+
 // POST request to /login
 router.post('/newUser', function(req, res, next) {
-      var userEntry = {
+      res.send(req.body)
+      r.db('mf_users').table('users').insert({
         name: req.body.name,
         email: req.body.email,
         day: req.body.day
-      }
-      res.send(userEntry)
-      r.db('mf_users').table('users').insert({
-        userEntry
   }).run().then((user) => {
     return user
   })
