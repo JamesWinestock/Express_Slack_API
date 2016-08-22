@@ -20,6 +20,12 @@ router.get('/', function(req, res, next) {
 })
 
 
+router.get('/:id', function(req, res) {
+  r.db('mf_users').table('users').filter({id: req.params.id})
+    .run().then((user) => {
+      res.json(user)
+    })
+});
 
 // POST request to /login
 router.post('/newUser', function(req, res, next) {
