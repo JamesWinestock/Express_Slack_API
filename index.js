@@ -17,11 +17,13 @@ app.use(helmet())
 // --------------------------------------------- Routes
 
 const users = require('./routes/users')
+const slack = require('./routes/slack')
 // const login = require('./routes/login')
 // const tests = require('./routes/test')
 // const posts = require('./routes/posts')
 
 app.use('/users', users)
+app.use('/slack', slack)
 // app.use('/login', login)
 // app.use('/tests', tests)
 // app.use('/posts', posts)
