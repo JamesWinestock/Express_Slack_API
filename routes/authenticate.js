@@ -3,7 +3,10 @@ var router = express.Router();
 
 // GET request to /login
 router.get('/', function(req, res, next) {
-  res.send("This is the login page");
+  r.db('mf_users').table('authenticate')
+    .run().then((users) => {
+      res.json(users)
+    })
 });
 
 // POST request to /login
